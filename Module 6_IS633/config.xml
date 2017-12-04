@@ -21,12 +21,13 @@
 </author>
 
 <preference name="phonegap-version" value="cli-6.5.0" />
+
 <plugin name="cordova-plugin-whitelist" source="npm" />
 <access origin="*" />
-
 <plugin name="cordova-plugin-geolocation" spec="2.4.3" />
 <plugin name="cordova-plugin-splashscreen" source="npm" />
 <plugin name="cordova-plugin-camera" source="npm"/>
+
 <preference name="SplashScreenDelay" value="3000" />
 
 <splash src="splash/ios/splash-large.png" platform="ios" width="1242" height="2208" />

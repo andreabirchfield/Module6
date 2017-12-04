@@ -561,16 +561,16 @@ function onDeviceReady() {
 
 
 function CapturePhoto()
-    {
-       navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype:
-                                   destinationtype.FILE_URI, saveToPhotoAlbum: true });
+    { 
+       navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
+       //navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype:destinationtype.FILE_URI, saveToPhotoAlbum: true });
        //The onSuccess parameter is thefunction that is called when the camera app operates successfully
        //The onFail parameter is the function that is called when no picture is returned
        //The other parameters indicate how the picture is to be handled
         
     }
  function onSuccess(imageURI)
- {
+ {  
     var picdisplay = document.getElementById("snapshot");
     picdisplay.style.display = 'block';
     picdisplay.src = imageURI;
