@@ -572,8 +572,8 @@ function CapturePhoto()
  function onSuccess(imageURI)
  {
     var picdisplay = document.getElementById("snapshot");
-    pickdisplay.style.display = 'block';
-    pickdisplay.src = imageURI;
+    picdisplay.style.display = 'block';
+    picdisplay.src = imageURI;
     //Assigns the picture to the image source property of the image on the web page
     
  }
