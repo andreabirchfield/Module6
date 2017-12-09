@@ -26,7 +26,7 @@
 
 <plugin name="cordova-plugin-geolocation" spec="2.4.3" />
 <plugin name="cordova-plugin-splashscreen" source="npm" />
-<plugin name="cordova-plugin-camera" source="npm" />
+<plugin name="cordova-plugin-camera" spec="1.2.0" source="npm" />
 <plugin name="cordova-plugin-contacts" source="npm" />
 <preference name="SplashScreenDelay" value="3000" />
 
@@ -50,5 +50,19 @@
 
 <icon src="icon.png" platform="android" qualifier="ldpi" />
 <icon src="icon.png" platform="winphone" />
+     
+     
+     <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need camera access to take pictures</string>
+</edit-config>
+     
+     <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need to photo library access to get pictures from there</string>
+</edit-config>
+     
+     <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need to photo library access to save pictures there</string>
+</edit-config>
+     
      
 </widget>
