@@ -629,9 +629,11 @@ function SearchContact(){
     options.filter   = lastname;
     options.multiple = true;
     options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers];
+    options2.desiredFields = [navigator.contacts.fieldType.familyName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers];
     options.hasPhoneNumber = true;
     var fields = [navigator.contacts.fieldType.displayName];
-    navigator.contacts.find(fields, onSuccess, onError, options);
+    var fields2 = [navigator.contacts.fieldType.familyName];
+    navigator.contacts.find(fields,fields2, onSuccess, onError, options);
     
 function onSuccess(contacts) {
     alert('Found ' + contacts.length + ' contacts.');
