@@ -45,15 +45,18 @@ function MenuChoice(selection)
             document.getElementById("findme").style.visibility = "visible";
             break;
         
+        case "camera":
+        document.getElementById("picture").style.visibility = "visible";
+         break;
+    
+        case "contacts":
+        document.getElementById("contacts").style.visibility = "visible";
+          break;
+        
         case "None":
-        break;
-        case "camera":document.getElementById("picture").style.visibility = "visible";
-        break;
-        case "contacts":document.getElementById("contacts").style.visibility = "visible";
-        break;
-        case "None":
-        break;
-    default:
+          break;
+        
+     default:
         alert("Please select a different menu option");
     }
 }
