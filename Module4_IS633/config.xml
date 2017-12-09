@@ -9,10 +9,10 @@
 
 <!--versionCode is optional and Android only -->
 
-<name>Andrea Birchfield Assignment 5</name>
+<name>Andrea Birchfield Assignment 6</name>
 
 <description>
-    Andrea Birchfield Assignment 5
+    Andrea Birchfield Assignment 6
 
 </description>
 
@@ -26,7 +26,7 @@
 
 <plugin name="cordova-plugin-geolocation" spec="2.4.3" />
 <plugin name="cordova-plugin-splashscreen" source="npm" />
-<plugin name="cordova-plugin-camera" spec="1.2.0" source="npm" />
+<plugin name="cordova-plugin-camera" source="npm" />
 <plugin name="cordova-plugin-contacts" source="npm" />
 <preference name="SplashScreenDelay" value="3000" />
 
