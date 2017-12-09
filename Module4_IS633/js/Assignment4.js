@@ -626,26 +626,19 @@ function SearchContact(){
    
     var lastname = document.getElementById("contactlast").value;
     var options      = new ContactFindOptions();
-    var table = document.createElement ("table");
-    table = "<table border = 1><tr><th>Name</th><th>Phone Numbers</th/</tr>";
     options.filter   = lastname;
     options.multiple = true;
     options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers];
     options.hasPhoneNumber = true;
      var fields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
     navigator.contacts.find(fields,onSuccess, onError, options);
-     table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
-    
-    
-    document.getElementById("contactname").innerHTML = table;
-
     
     
 function onSuccess(contacts) {
     alert('Found ' + contacts.length + ' contacts.');
     var count="";
     var table = document.createElement ("table");
-    table = "<table border = 1><tr><th>Name</th><th>Phone Numbers</th/</tr>";
+    table = "<table border = 1><tr><th>Name</th><th>Associated Phone Numbers</th/</tr>";
     for (var i = 0; i<contacts.length; i++){
         
         var phone = "";
