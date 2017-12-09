@@ -27,7 +27,7 @@
 <plugin name="cordova-plugin-geolocation" spec="2.4.3" />
 <plugin name="cordova-plugin-splashscreen" source="npm" />
 <plugin name="cordova-plugin-camera" spec="1.2.0" source="npm" />
-<plugin name="cordova-plugin-camera" spec="3.0.0" source="npm"/>-->
+<plugin name="cordova-plugin-camera" spec="3.0.0" source="npm"/>
 <plugin name="cordova-plugin-contacts" source="npm" />
 <preference name="SplashScreenDelay" value="3000" />
 
