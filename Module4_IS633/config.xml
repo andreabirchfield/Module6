@@ -69,5 +69,8 @@
     <string>need to photo library access to save pictures there</string>
 </edit-config>
      
+     <edit-config target="NSContactsUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need contacts access to search friends</string>
+</edit-config>
      
 </widget>
