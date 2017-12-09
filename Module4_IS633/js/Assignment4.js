@@ -591,13 +591,14 @@ function PickContact()
 {
     //The pickcontact method has two parameters.  The first parameter is the function that handles a successful contact
 //selection, and the data is returned.  The second parameter is optional, and is called if no contact is returned.
-//The contact information is returned as a JSON object, with arrays for certain items like phone
-numbers.navigator.contacts.pickContact(function(contact)
+//The contact information is returned as a JSON object, with arrays for certain items like phone numbers.
+navigator.contacts.pickContact(function(contact)
 //Function that operates when a contact is successfully returned
 {
   var contactinfo = "";
   contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
-  var count = 0;if (contact.phoneNumbers !== null)
+  var count = 0;
+  if (contact.phoneNumbers !== null)
 //Checks for the presence of phone numbers
 {
     for (count=0; count < contact.phoneNumbers.length; count++)
@@ -620,6 +621,50 @@ if (contact.emails !== null)
 }
 );
 }
+
+function SearchContact(){
+   
+    var lastname = document.getElementById("contactlast").value;
+    var options      = new ContactFindOptions();
+    options.filter   = lastname;
+    options.multiple = true;
+    options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers];
+    options.hasPhoneNumber = true;
+    var fields = [navigator.contacts.fieldType.displayName];
+    navigator.contacts.find(fields, onSuccess, onError, options);
+    
+function onSuccess(contacts) {
+    alert('Found ' + contacts.length + ' contacts.');
+    var count="";
+    var table = document.createElement ("table");
+    table = "<table border = 1><tr><th>Display Name</th><th>Phone Numbers</th/</tr>";
+    for (var i = 0; i<contacts.length; i++){
+        
+        var phone = "";
+        var name = contacts[i].name.formatted;
+        if (contacts.phoneNumbers !== null) 
+{
+for (count=0; count < contacts[i].phoneNumbers.length; count++) 
+{
+phone += contacts[i].phoneNumbers[count].value + ", ";
+}
+        }
+        
+        
+    table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
+    
+    }
+    document.getElementById("contactname").innerHTML = table;
+
+}
+function onError(contactError) {
+    alert('onError!');
+}
+
+
+}
+
+
   function goBack() {
     
       document.getElementById("custlist").style.visibility = "visible";
