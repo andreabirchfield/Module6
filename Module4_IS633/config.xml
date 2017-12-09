@@ -28,12 +28,8 @@
 <plugin name="cordova-plugin-splashscreen" source="npm" />
 <!--<plugin name="cordova-plugin-camera" spec="1.2.0" source="npm" />-->
 <plugin name="cordova-plugin-contacts" source="npm" spec="1.1.0" />
-<plugin name="cordova-plugin-camera" source="npm" spec= "3.0.0"/>
+<plugin name="cordova-plugin-camera" source="npm" spec= "2.2.0"/>
 
-<platform name="android">
-    <plugin name="cordova-plugin-contacts" source="npm" spec="1.1.0" />
-    <plugin name="cordova-plugin-camera" source="npm" spec= "1.2.0" />
-</platform>
 
 <!--<plugin name="cordova-plugin-camera" spec="3.0.0" source="npm"/>-->
 <!--<plugin name="cordova-plugin-contacts" source="npm" />-->
