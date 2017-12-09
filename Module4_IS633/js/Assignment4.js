@@ -633,7 +633,8 @@ function SearchContact(){
     options.hasPhoneNumber = true;
     var fields = [navigator.contacts.fieldType.displayName];
     var fields2 = [navigator.contacts.fieldType.familyName];
-    navigator.contacts.find(fields,fields2, onSuccess, onError, options);
+    navigator.contacts.find(fields,onSuccess, onError, options);
+    navigator.contacts.find(fields2,onSuccess,onError,options2);
     
 function onSuccess(contacts) {
     alert('Found ' + contacts.length + ' contacts.');
